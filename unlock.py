@@ -1,15 +1,20 @@
 NUMBER_OF_PEOPLE = 41
 
+
 def create_circle(number_of_people):
-    return range(1, number_of_people+1)
+    return range(1, number_of_people + 1)
+
 
 def has_even_length(a_list):
     return len(a_list) % 2 == 0
 
+
 def sieve_pass(a_list):
-    return list( filter(lambda x: (a_list.index(x) % 2 == 0), a_list) )
+    return list(filter(lambda x: (a_list.index(x) % 2 == 0), a_list))
+
 
 # when removed_last is True, we must start removing from the first position
+
 
 def process_circle(a_circle):
     my_circle = list(a_circle)
@@ -32,12 +37,12 @@ def process_circle(a_circle):
                 my_circle = sieve_pass(my_circle)
                 removed_last = False
 
-        print('\n', my_circle, len(my_circle))
-    
+        print("\n", my_circle, len(my_circle))
+
     return my_circle[0]
 
 
 circle = create_circle(NUMBER_OF_PEOPLE)
-print('initial circle: ', list(circle), len(circle))
+print("initial circle: ", list(circle), len(circle))
 
 process_circle(circle)

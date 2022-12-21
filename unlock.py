@@ -1,6 +1,7 @@
-NUMBER_OF_PEOPLE = 11
-# NUMBER_OF_PEOPLE = 3
-# STEP = 2
+NUMBER_OF_PEOPLE = 41
+
+def create_circle(number_of_people):
+    return range(1, number_of_people+1)
 
 def has_even_length(a_list):
     return len(a_list) % 2 == 0
@@ -38,7 +39,7 @@ def process_circle(a_circle):
     return my_circle[0]
 
 
-circle = range(1, NUMBER_OF_PEOPLE+1)
+circle = create_circle(NUMBER_OF_PEOPLE)
 print('initial circle: %r' % circle)
 
 process_circle(circle)

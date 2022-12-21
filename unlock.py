@@ -32,14 +32,12 @@ def process_circle(a_circle):
                 my_circle = sieve_pass(my_circle)
                 removed_last = False
 
-        print(my_circle, len(my_circle))
+        print('\n', my_circle, len(my_circle))
     
     return my_circle[0]
 
 
 circle = create_circle(NUMBER_OF_PEOPLE)
-print('initial circle: %r' % circle)
+print('initial circle: ', list(circle), len(circle))
 
 process_circle(circle)
-
-
